@@ -1,0 +1,65 @@
+nav{
+    font-family: Jura;
+    font-size: 35px;    
+}
+.nav-item{
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.nav-img{
+    width: 150px;
+    height: auto;    
+}
+.navbar-nav{
+    margin-left: 25px;
+}
+.home{
+    height: 650px;
+    background: linear-gradient(black 10%,rgb(82, 80, 80));
+}
+.landinglogo{
+    width: 600px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+    padding-top: 5%;
+        
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0;        
+        width: 500px;
+        height: auto;
+    }   
+    100% { 
+        opacity: 1; 
+        width: 600px;
+        height: auto;
+    }
+  }
+
+@media(max-width:500px){
+    .nav-img{
+        width: 100px;
+        height: auto;
+    }
+    .landinglogo{
+        padding-top: 10%;
+        width: 300px;
+        height: auto;
+    }
+    @keyframes fadeIn {
+        0% { 
+            opacity: 0;        
+            width: 200px;
+            height: auto;
+        }   
+        100% { 
+            opacity: 1; 
+            width: 300px;
+            height: auto;
+        }
+      }
+}
