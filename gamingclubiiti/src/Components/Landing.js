@@ -3,8 +3,8 @@ import img1 from '../white-logo.png'
 
 function Landing() {
   return (
-    <div className='home'>        
-      <img src={img1} alt="..." className='landinglogo'/> 
+    <div className='home'>
+      <img src={img1} alt="..." className='landinglogo' />
     </div>
   )
 }
