@@ -1,26 +1,60 @@
 import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import img1 from '../white-logo.png';
-import bg from '../landing_bg.jpg';
+
 
 function About(props) {
   return (
     <div className="home-reverse">
-      <Container fluid>
-        <Row>
-          <Col>
-            <img src={bg} alt="..." className='landinglogo' />
-          </Col>
-          <Col>
-            <h1 className='about-us-heading'>About Us</h1>
-            <p className='about-us-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel tincidunt dolor. Donec interdum erat ipsum, a sodales elit pellentesque in. Mauris eu enim auctor, porttitor metus sed, hendrerit tellus. Suspendisse finibus eget massa nec sagittis. Curabitur ut fermentum neque, eget vestibulum magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus interdum luctus sem, ac condimentum urna suscipit nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus commodo auctor dolor et finibus.</p>
-          </Col>
-        </Row>
-      </Container>
+      <div className='pt-36'>
+        <div className='flex flex-col items-start w-full'>
+          <h1 className='uppercase px-24 pb-12 text-gray-300 text-5xl'>Meet the team</h1>
+          <div className='container mx-auto my-auto flex flex-wrap flex-col items-center space-y-12'>
+            <div className='flex flex-row items-center text-center space-x-12'>
+
+              <div className='flex flex-col'>
+                <ul className="potrait">
+                  <li className='potrait_name mr-8'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>john carter</h2>
+                  <p className='text-sm text-gray-300'>Head Of Gaming Club</p></li>
+                </ul>
+              </div>
+              <div className='flex flex-col'>
+                <ul className="potrait2">
+                <li className='potrait_name mr-8'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>Michael carn</h2>
+                <p className='text-sm text-gray-300'>FPS Head</p></li>
+                </ul>
+              </div>
+              <div className='flex flex-col'>
+                <ul className="potrait3">
+                <li className='potrait_name mr-8'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>Gary scott</h2>
+                <p className='text-sm text-gray-300'>Creative Head</p></li>
+                </ul>
+              </div>
+            </div>
+            <div className='flex flex-row items-center text-center space-x-12'>
+
+              <div className='flex flex-col'>
+                <ul className="potrait3">
+                <li className='potrait_name mr-8'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>Gary scott</h2>
+                <p className='text-sm text-gray-300'>Creative Head</p></li>
+                </ul>
+              </div>
+              <div className='flex flex-col'>
+                <ul className="potrait2">
+                <li className='potrait_name mr-8'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>Michael carn</h2>
+                <p className='text-sm text-gray-300'>FPS Head</p></li>
+                </ul>
+              </div>
+              <div className='flex flex-col'>
+                <ul className="potrait">
+                  <li className='potrait_name mr-8'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>john carter</h2>
+                  <p className='text-sm text-gray-300'>Head Of Gaming Club</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default About
