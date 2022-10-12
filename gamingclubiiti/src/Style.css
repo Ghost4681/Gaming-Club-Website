@@ -1,65 +1,291 @@
-nav{
+nav {
     font-family: Jura;
-    font-size: 35px;    
+    font-size: 35px;
 }
-.nav-item{
+
+.nav-item {
     padding-left: 32px;
     padding-right: 32px;
 }
-.nav-img{
+
+.nav-img {
     width: 150px;
-    height: auto;    
+    height: auto;
 }
-.navbar-nav{
+
+.navbar-nav {
     margin-left: 25px;
 }
-.home{
-    height: 650px;
-    background: linear-gradient(black 10%,rgb(82, 80, 80));
+
+.home {
+    height: 100vh;
+    background: linear-gradient(black 30%, rgb(129, 125, 125));
 }
-.landinglogo{
+
+.home-reverse {
+    height: 150vh;
+    background-color: #7a7676;
+
+}
+.tourney{
+    height: 100vh;
+    background: linear-gradient(#5f5d5d 30%, black);
+}
+
+.poster_cover{
+    height: 80vh;
+    background-image: url('./static/cube_wars_poster.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+.poster_contain{
+    height: 80vh;
+    background-image: url('./static/cube_wars_poster.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+.-mt-21 {
+    margin-top: -3.5rem;
+}
+
+.stats-card {
+    background-color: rgb(10, 103, 44);
+}
+
+.test {
+    background-color: rgb(255, 255, 255);
+}
+
+.tourn-card{
+    height: 60vh;
+    width: 20vw;
+    background-color: rgb(216, 229, 229);
+    box-shadow: rgba(184, 184, 193, 0.25) 0px 50px 100px -20px, rgba(230, 226, 226, 0.3) 0px 30px 60px -30px;
+}
+
+.minecraft-card-img{
+    height: 35%;
+    background-image: url('./static/minecraft_logo.png');
+    border-radius: 1rem;
+    background-size: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: float 6s ease-in-out infinite;
+}
+.cod-card-img{
+    height: 35%;
+    background-image: url('./static/cod_logo.png');
+    border-radius: 1rem;
+    background-size: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: float 6s ease-in-out infinite;
+}
+.valorant-card-img{
+    height: 35%;
+    background-image: url('./static/valorant_logo.png');
+    border-radius: 1rem;
+    background-size: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+    0% {
+        transform: translateY(0rem);
+    }
+    50% {
+        transform: translateY(-1rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+}
+
+.shadow{
+    height: 2rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-image: radial-gradient(ellipse, rgb(91, 88, 88), rgb(174, 168, 168)) ;
+}
+
+.about-us-heading {
+    color: black;
+    padding-top: 4rem;
+    text-align: right;
+    padding-right: 12rem;
+}
+
+.about-us-text {
+    color: black;
+    text-align: right;
+    padding-right: 12rem;
+}
+
+.potrait{
+    height: 21rem;
+    width: 23rem;
+    object-fit: cover;
+    transition: transform 0.2s, background-image 0.2s;
+    background-image: url('./static/potrait_test_bw.png');
+    background-size: cover;
+}
+.potrait:hover{
+    transform: scale(1.1);
+    background-image: url('./static/potrait_test.jpg');
+}
+.potrait2{
+    height: 21rem;
+    width: 23rem;
+    object-fit: cover;
+    transition: transform 0.2s, background-image 0.2s;
+    background-image: url('./static/potrait_test_2_bw.png');
+    background-size: cover;
+}
+.potrait2:hover{
+    transform: scale(1.1);
+    background-image: url('./static/potrait_test_2.jpg');
+}
+.potrait3{
+    height: 21rem;
+    width: 23rem;
+    object-fit: cover;
+    transition: transform 0.2s, background-image 0.2s;
+    background-image: url('./static/potrait_test_3_bw.png');
+    background-size: cover;
+}
+.potrait3:hover{
+    transform: scale(1.1);
+    background-image: url('./static/potrait_test_3.jpg');
+}
+
+.potrait_name{
+    min-width: max-content;
+    overflow: hidden;
+    max-height: 0rem;
+    transition: max-height 0.2s;
+    background-color: #4a4747;
+}
+
+.potrait:hover .potrait_name{
+    max-height: 4rem;
+
+}
+.potrait2:hover .potrait_name{
+    max-height: 4rem;
+
+}
+.potrait3:hover .potrait_name{
+    max-height: 4rem;
+
+}
+
+
+.landinglogo {
     width: 600px;
     height: auto;
     display: block;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
     padding-top: 5%;
-        
+
 }
 
 @keyframes fadeIn {
-    0% { 
-        opacity: 0;        
+    0% {
+        opacity: 0;
         width: 500px;
         height: auto;
-    }   
-    100% { 
-        opacity: 1; 
+    }
+
+    100% {
+        opacity: 1;
         width: 600px;
         height: auto;
     }
-  }
+}
 
-@media(max-width:500px){
-    .nav-img{
+@media(max-width:500px) {
+    .nav-img {
         width: 100px;
         height: auto;
     }
-    .landinglogo{
+
+    .landinglogo {
         padding-top: 10%;
         width: 300px;
         height: auto;
     }
+
     @keyframes fadeIn {
-        0% { 
-            opacity: 0;        
+        0% {
+            opacity: 0;
             width: 200px;
             height: auto;
-        }   
-        100% { 
-            opacity: 1; 
+        }
+
+        100% {
+            opacity: 1;
             width: 300px;
             height: auto;
         }
-      }
+    }
+}
+
+.im {
+    margin-left: 10rem;
+    margin-top: -7rem;
+    height: 32rem;
+}
+
+.flex {
+    display: flex
+}
+
+.flex-col {
+    flex-direction: column
+}
+
+.w-full {
+    width: 100%
+}
+
+.justify-center {
+    justify-content: center
+}
+
+.items-start {
+    align-items: flex-start
+}
+
+.text-center {
+    text-align: center
+}
+
+.text-5xl {
+    font-size: 3rem;
+    line-height: 1
+}
+
+.leading-tight {
+    line-height: 1.25
+}
+
+.px-3 {
+    padding-left: .75rem;
+    padding-right: .75rem
+}
+
+.pt-1-5{
+    padding-top: 0.40rem;
+}
+
+.footer{
+    background-color: black;
 }

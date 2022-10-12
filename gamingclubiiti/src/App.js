@@ -5,8 +5,13 @@ import Homepage from './Components/Homepage';
 import Events from './Components/Events';
 import Sponsors from './Components/Sponsors';
 import Gallery from './Components/Gallery';
+import News from './Components/News';
+import About from './Components/About';
+import Tourney from './Components/Tourney'
+import Past_Event from './Components/Past_Event';
 import './Style.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -15,11 +20,13 @@ function App() {
         <Navbar />
         <Routes>        
           <Route path="" element={<Homepage />} /> 
-          <Route path="events" element={<Events />} />
+          <Route path="tourneys" element={<Tourney />} />
           <Route path="sponsors" element={<Sponsors />} />
           <Route path="gallery" element={<Gallery />} />
+          <Route path="news" element={<News />} />
+          <Route path="/cube_wars" element={<Past_Event />} />
         </Routes>
-      </Router>     
+      </Router>
     </div>
   );
 }

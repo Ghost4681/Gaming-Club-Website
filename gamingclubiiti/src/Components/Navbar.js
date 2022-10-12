@@ -15,13 +15,13 @@ function Navbar() {
                 <Link to="/" className="nav-link">Home <span className="sr-only">(current)</span></Link>
             </li>    
             <li className="nav-item active">
-                <Link to="/events" className="nav-link">Events <span className="sr-only">(current)</span></Link>
+                <Link to="/tourneys" className="nav-link">Events <span className="sr-only">(current)</span></Link>
             </li>  
             <li className="nav-item active">
                 <Link to="/sponsors" className="nav-link">Sponsors <span className="sr-only">(current)</span></Link>
             </li>  
             <li className="nav-item active">
-                <a className="nav-link" href="#">News <span className="sr-only">(current)</span></a>
+            <Link to="/news" className="nav-link">News <span className="sr-only">(current)</span></Link>
             </li>  
             <li className="nav-item active">
                 <a className="nav-link" href="#about">About Us <span className="sr-only">(current)</span></a>
