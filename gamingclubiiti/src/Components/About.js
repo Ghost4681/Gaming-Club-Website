@@ -1,4 +1,5 @@
 import React from 'react'
+import MemberCard from './MemberCard';
 
 
 function About(props) {
@@ -10,45 +11,17 @@ function About(props) {
           <div className='container mx-auto my-auto flex flex-wrap flex-col items-center space-y-12'>
             <div className='flex flex-row items-center text-center space-x-12'>
 
-              <div className='flex flex-col'>
-                <ul className="potrait">
-                  <li className='potrait_name mr-8'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>john carter</h2>
-                  <p className='text-sm text-gray-300'>Head Of Gaming Club</p></li>
-                </ul>
-              </div>
-              <div className='flex flex-col'>
-                <ul className="potrait2">
-                <li className='potrait_name mr-8'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>Michael carn</h2>
-                <p className='text-sm text-gray-300'>FPS Head</p></li>
-                </ul>
-              </div>
-              <div className='flex flex-col'>
-                <ul className="potrait3">
-                <li className='potrait_name mr-8'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>Gary scott</h2>
-                <p className='text-sm text-gray-300'>Creative Head</p></li>
-                </ul>
-              </div>
+              <MemberCard Imglink={require("../static/potrait_test.jpg")} BwImg={require("../static/potrait_test_bw.png")} Name='John Carter' Post='Head of Gaming Club' />
+              <MemberCard Imglink={require("../static/potrait_test_2.jpg")} BwImg={require("../static/potrait_test_2_bw.png")} Name='Michael carn' Post='FPS Head' />
+              <MemberCard Imglink={require("../static/potrait_test_3.jpg")} BwImg={require("../static/potrait_test_3_bw.png")} Name='Gary scott' Post='Creative Head' />
+
             </div>
             <div className='flex flex-row items-center text-center space-x-12'>
 
-              <div className='flex flex-col'>
-                <ul className="potrait3">
-                <li className='potrait_name mr-8'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>Gary scott</h2>
-                <p className='text-sm text-gray-300'>Creative Head</p></li>
-                </ul>
-              </div>
-              <div className='flex flex-col'>
-                <ul className="potrait2">
-                <li className='potrait_name mr-8'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>Michael carn</h2>
-                <p className='text-sm text-gray-300'>FPS Head</p></li>
-                </ul>
-              </div>
-              <div className='flex flex-col'>
-                <ul className="potrait">
-                  <li className='potrait_name mr-8'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>john carter</h2>
-                  <p className='text-sm text-gray-300'>Head Of Gaming Club</p></li>
-                </ul>
-              </div>
+              <MemberCard Imglink={require("../static/potrait_test_3.jpg")} BwImg={require("../static/potrait_test_3_bw.png")} Name='Gary scott' Post='Creative Head' />
+              <MemberCard Imglink={require("../static/potrait_test_2.jpg")} BwImg={require("../static/potrait_test_2_bw.png")} Name='Michael carn' Post='FPS Head' />
+              <MemberCard Imglink={require("../static/potrait_test.jpg")} BwImg={require("../static/potrait_test_bw.png")} Name='John Carter' Post='Head of Gaming Club' />
+              
             </div>
           </div>
         </div>
