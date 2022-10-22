@@ -1,7 +1,7 @@
 import React from 'react'
 import img1 from '../white-logo.png'
 import Landing from './Landing'
-import About from './About'
+import About from './About/About'
 import Tourney from './Tourney'
 import Footer from './Footer'
 

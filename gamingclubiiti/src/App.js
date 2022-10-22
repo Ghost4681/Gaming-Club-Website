@@ -6,7 +6,7 @@ import Events from './Components/Events';
 import Sponsors from './Components/Sponsors';
 import Gallery from './Components/Gallery';
 import News from './Components/News';
-import About from './Components/About';
+import About from './Components/About/About';
 import Tourney from './Components/Tourney'
 import Past_Event from './Components/Past_Event';
 import './Style.css'
