@@ -156,7 +156,7 @@ app.delete("/deluevent/:id" , async(req,res) => {
     let uevent;
 
     try{
-        await Registered.remove({eventid})
+        await Registered.deleteMany({eventid})
     }catch(err){
         console.log(first)
     }
