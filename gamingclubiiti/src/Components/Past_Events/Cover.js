@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import gamepad from '../static/gamepad.png'
-import people from '../static/people.png'
+import gamepad from '../../static/gamepad.png'
+import people from '../../static/people.png'
 import { faUserGroup } from '@fortawesome/free-solid-svg-icons'
 
 function Cover() {
