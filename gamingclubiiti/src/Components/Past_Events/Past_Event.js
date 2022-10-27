@@ -1,6 +1,9 @@
 import React from 'react'
 import About_event from './About_event'
 import Cover from './Cover'
+import Gallery from './Gallery'
+import Footer from '../Footer'
+
 
 
 function Past_Event() {
@@ -8,6 +11,8 @@ function Past_Event() {
         <div>
             <Cover />
             <About_event />
+            <Gallery />
+            <Footer />
         </div>
     )
 }
