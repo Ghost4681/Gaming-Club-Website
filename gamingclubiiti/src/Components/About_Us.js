@@ -6,15 +6,17 @@ import heart from '../static/heart.png'
 import comments from '../static/comments.png'
 import dm from '../static/dm.png'
 import bookmark from '../static/bookmark.png'
+import vandal from '../static/valorant_vandal.png'
+
 
 function About_Us() {
-    let url1 = "https://www.instagram.com/reel/CipnxMWLRNz/?utm_source=ig_embed&amp;utm_campaign=loading";
-    let url2 = "https://www.instagram.com/reel/CipnxMWLRNz/?utm_source=ig_embed&amp;utm_campaign=loading";
+    let url1 = "/about";
     return (
         <div>
             <div className="home-reverse">
-                <div className='pt-36'>
+                <div className='pt-36 z-10'>
                     <div className='flex flex-row justify-around h-full'>
+
                         {/* instagram card */}
                         <div className='flex flex-col w-96 h-196 bg-slate-900 pt-4 rounded-3xl shadow-2xl'>
                             <div className='flex flex-row justify-between w-full'>
@@ -46,10 +48,21 @@ function About_Us() {
                             </div>
                             <div><p className='pt-2 ml-4 text-gray-500 uppercase text-sm'>september 18</p></div>
                         </div>
-                        <div className='mt-16 flex flex-col w-96 text-right'>
-                        <h2 className='text-gray-100 text-4xl uppercase'>about us</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minima, temporibus, ratione adipisci consequuntur, officia odit ad molestiae distinctio explicabo repudiandae reprehenderit? Quod incidunt earum facilis veritatis tenetur aperiam ratione.</p>
+                        <div className='flex flex-col justify-end'>
+
+                            <div className='flex flex-col w-96 text-right justify-end ml-36'>
+                                <h2 className='text-gray-100 text-4xl uppercase'>about us</h2>
+                                <p className='text-gray-300 text-lg'>We just turned <span className='text-red-400'>ONE</span> and yet have made more than <span className='text-red-400'>20</span> tournaments, and have donated more than <span className='text-red-400'>₹30,000</span> to the community as a small symbol of what we stand for and what we can do.</p>
+                                <div className='flex-row w-full justify-center space-x-8 z-10'>
+
+                                    <a href={url1}><button
+                                        className=" bg-red-50 hover:bg-red-500 text-gray-800 hover:text-gray-50 font-bold rounded-full my-6 py-4 px-4 shadow-lg transition ease-in-out duration-500">Meet The Team</button></a>
+                                </div>
+
+                            </div>
+                            <div className='z-0 ml-36 valo-bg w-full h-48'></div>
                         </div>
+
                     </div>
                 </div>
             </div>
