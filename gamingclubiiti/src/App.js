@@ -8,7 +8,7 @@ import Gallery from './Components/Gallery';
 import News from './Components/News';
 import About from './Components/About/About';
 import Tourney from './Components/Tourney'
-import Past_Event from './Components/Past_Event';
+import Past_Event from './Components/Past_Events/Past_Event';
 import './Style.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,6 +25,8 @@ function App() {
           <Route path="gallery" element={<Gallery />} />
           <Route path="news" element={<News />} />
           <Route path="/cube_wars" element={<Past_Event />} />
+          <Route path="/about" element={<About />} />
+
         </Routes>
       </Router>
     </div>

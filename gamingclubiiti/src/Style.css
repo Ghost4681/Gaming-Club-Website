@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 nav {
     font-family: Jura;
     font-size: 35px;
@@ -21,19 +24,45 @@ nav {
     height: 100vh;
 }
 
+.mt-196{
+    margin-top:150vh;
+}
+
+.vh-150{
+    height: 150vh;
+}
+
+.vh-300{
+    height: 300vh;
+}
+
 .home {
     height: 100vh;
     background: linear-gradient(black 30%, rgb(129, 125, 125));
 }
 
 .home-reverse {
-    height: 150vh;
+    height: 120vh;
     background-color: #7a7676;
 
 }
+
+.no-line{
+    text-decoration: none;
+    color:#4a4747;
+}
+a{
+    text-decoration: none;
+}
+
 .tourney{
     height: 100vh;
     background: linear-gradient(#5f5d5d 30%, black);
+}
+
+.meet-team:hover .valo-bg{
+    background-image: url('./static/valorant_vandal_red.png');
+    filter: brightness(100%);
 }
 
 .poster_cover{
@@ -107,7 +136,21 @@ nav {
     background-size: 35%;
     background-position: center;
     background-repeat: no-repeat;
-    animation: float 5s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
+}
+
+.valo-bg{
+    background-image: url('./static/valorant_vandal.png');
+    transform:rotate(-30deg) scaleX(-1) scale(1.1);
+    background-repeat: no-repeat;
+    filter: brightness(75%);
+    transition: background-image 0.5s, filter 0.5s;
+
+}
+
+.valo-bg:hover{
+    background-image: url('./static/valorant_vandal_red.png');
+    filter: brightness(100%);
 }
 
 @keyframes float{
@@ -276,8 +319,10 @@ nav {
     background-color: black;
 }
 
+/* results */
 .results_winner{
     height: 20rem;
+
 }
 
 .slider{
@@ -335,4 +380,168 @@ nav {
     width: 300px;
     align-items: center;
     perspective: 100px;
+
+    width: 20rem;
+    object-fit: cover;
+}
+.results_runner{
+    height: 15rem;
+    width: 15rem;
+    object-fit: cover;
+}
+.podium{
+    width: 70vw;
+}
+
+.width-18{
+    width: 18rem;
+}
+
+/* confetti */
+.confetti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1000;
+}
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: #ffd300;
+    top: 0;
+    opacity: 0;
+}
+.confetti-piece:nth-child(1) {
+    left: 7%;
+    transform: rotate(-40deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 182ms;
+    animation-duration: 1116ms;
+}
+.confetti-piece:nth-child(2) {
+    left: 14%;
+    transform: rotate(4deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 161ms;
+    animation-duration: 1076ms;
+}
+.confetti-piece:nth-child(3) {
+    left: 21%;
+    transform: rotate(-51deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 481ms;
+    animation-duration: 1103ms;
+}
+.confetti-piece:nth-child(4) {
+    left: 28%;
+    transform: rotate(61deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 334ms;
+    animation-duration: 708ms;
+}
+.confetti-piece:nth-child(5) {
+    left: 35%;
+    transform: rotate(-52deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 302ms;
+    animation-duration: 776ms;
+}
+.confetti-piece:nth-child(6) {
+    left: 42%;
+    transform: rotate(38deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 180ms;
+    animation-duration: 1168ms;
+}
+.confetti-piece:nth-child(7) {
+    left: 49%;
+    transform: rotate(11deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 395ms;
+    animation-duration: 1200ms;
+}
+.confetti-piece:nth-child(8) {
+    left: 56%;
+    transform: rotate(49deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 14ms;
+    animation-duration: 887ms;
+}
+.confetti-piece:nth-child(9) {
+    left: 63%;
+    transform: rotate(-72deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 149ms;
+    animation-duration: 805ms;
+}
+.confetti-piece:nth-child(10) {
+    left: 70%;
+    transform: rotate(10deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 351ms;
+    animation-duration: 1059ms;
+}
+.confetti-piece:nth-child(11) {
+    left: 77%;
+    transform: rotate(4deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 307ms;
+    animation-duration: 1132ms;
+}
+.confetti-piece:nth-child(12) {
+    left: 84%;
+    transform: rotate(42deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 464ms;
+    animation-duration: 776ms;
+}
+.confetti-piece:nth-child(13) {
+    left: 91%;
+    transform: rotate(-72deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 429ms;
+    animation-duration: 818ms;
+}
+.confetti-piece:nth-child(odd) {
+    background: #7431e8;
+}
+.confetti-piece:nth-child(even) {
+    z-index: 1;
+}
+.confetti-piece:nth-child(4n) {
+    width: 5px;
+    height: 12px;
+    animation-duration: 2000ms;
+}
+.confetti-piece:nth-child(3n) {
+    width: 3px;
+    height: 10px;
+    animation-duration: 2500ms;
+    animation-delay: 1000ms;
+}
+.confetti-piece:nth-child(4n-7) {
+  background: red;
+}
+@keyframes makeItRain {
+    from {opacity: 0;}
+    50% {opacity: 1;}
+    to {transform: translateY(80vh);}
+}
+
+.float-5{
+    animation: float 5s ease-in-out infinite;
+}
+
+.delay-2{
+    animation-delay: 2.5s;
+}
+
+/* instagram */
+.h-196{
+    height: 35rem;
 }
