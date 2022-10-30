@@ -25,6 +25,8 @@ function App() {
           <Route path="gallery" element={<Gallery />} />
           <Route path="news" element={<News />} />
           <Route path="/cube_wars" element={<Past_Event />} />
+          <Route path="/about" element={<About />} />
+
         </Routes>
       </Router>
     </div>
