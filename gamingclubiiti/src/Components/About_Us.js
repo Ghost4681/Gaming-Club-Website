@@ -18,7 +18,7 @@ function About_Us() {
                     <div className='flex flex-row justify-around h-full'>
 
                         {/* instagram card */}
-                        <div className='flex flex-col w-96 h-196 bg-slate-900 pt-4 rounded-3xl shadow-2xl'>
+                        <div className='flex flex-col w-96 h-196 bg-slate-900 pt-4 rounded-3xl shadow-2xl ml-8'>
                             <div className='flex flex-row justify-between w-full'>
                                 <div className='pl-4 flex flex-row justify-start w-1/2'>
                                     <div className='w-1/4'><img className='w-16' src={logo}></img></div>
@@ -50,7 +50,7 @@ function About_Us() {
                         </div>
                         <div className='flex flex-col justify-end'>
 
-                            <div className='flex flex-col w-96 text-right justify-end ml-36'>
+                            <div className='flex flex-col w-96 text-right justify-end ml-36 mr-16'>
                                 <h2 className='text-gray-100 text-4xl uppercase'>about us</h2>
                                 <p className='text-gray-300 text-lg'>We just turned <span className='text-red-400'>ONE</span> and yet have made more than <span className='text-red-400'>20</span> tournaments, and have donated more than <span className='text-red-400'>₹30,000</span> to the community as a small symbol of what we stand for and what we can do.</p>
                                 <div className='flex-row w-full justify-center space-x-8 z-10'>

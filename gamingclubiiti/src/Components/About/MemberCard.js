@@ -7,11 +7,11 @@ function Member_Card(props) {
 
     return (
         <div className='flex flex-col'>
-            <a href={Insta} target="_blank">
+            <a href={Insta} target="_blank" title='Click to open their profile'>
                 <button>
                     <ul className="portrait rounded-lg" style={{ '--image': `url('${BwImg}')`, '--hover-image': `url('${Imglink}')` }}>
                         <li className='portrait_name mr-8 rounded-b-lg'><h2 className='uppercase text-slate-300 text-md leading-3 pt-3'>{Name}</h2>
-                            <p className='text-sm text-gray-300'>{Post}</p></li>
+                            <p className='text-sm text-gray-300 capitalize'>{Post}</p></li>
                     </ul>
                 </button>
             </a>
