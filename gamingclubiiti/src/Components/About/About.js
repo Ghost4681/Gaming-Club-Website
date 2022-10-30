@@ -4,12 +4,15 @@ import MemberCard from './MemberCard';
 
 function About(props) {
   return (
+
     <div className="vh-300 bg-gray-500">
       <div className='pt-36'>
         <div className='flex flex-col items-start w-full'>
           <h1 className='uppercase px-24 pb-12 text-gray-300 text-5xl'>Meet the team</h1>
           <div className='container mx-auto my-auto flex flex-wrap flex-col items-center space-y-12'>
-            <div className='flex flex-row items-center text-center space-x-12'>
+            <div className='slider'>
+              <div className='flex items-center text-center space-x-12 slide-track' style={{'--at0' : '0', '--at100' : '-349px * 3'}}>
+
 
               <MemberCard Imglink={require("../../static/members/sahil.jpg")} BwImg={require("../../static/members/sahil_bw.jpg")} Name='Sahil Rapartiwar' Post='Head of Gaming Club' Insta='https://www.instagram.com/sahil_rapartiwar_/' />
             </div>
@@ -39,6 +42,7 @@ function About(props) {
               <MemberCard Imglink={require("../../static/members/aditya.jpg")} BwImg={require("../../static/members/aditya_bw.jpg")} Name='Aditya Deshpande' Post='Battle Royale Head' Insta='https://www.instagram.com/donttaketension2.0/'/>
               <MemberCard Imglink={require("../../static/members/saatvik.jpg")} BwImg={require("../../static/members/saatvik_bw.jpg")} Name='Saattvik Thourwal' Post='Streaming Team Head' Insta='https://www.instagram.com/saattvik/'/>
               
+              </div>
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ function Member_Card(props) {
 
     const { Imglink, BwImg, Name, Post, Insta } = props;
 
+
     return (
         <div className='flex flex-col'>
             <a href={Insta} target="_blank">
@@ -14,6 +15,7 @@ function Member_Card(props) {
                     </ul>
                 </button>
             </a>
+
         </div>
     );
 }
