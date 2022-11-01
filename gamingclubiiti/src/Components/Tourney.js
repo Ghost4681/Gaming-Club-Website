@@ -7,11 +7,10 @@ import {Link} from 'react-router-dom'
 import coming_soon from '../static/coming_soon.jpg'
 
 
-
 function Tourney() {
   return (
-    <div className='tourney'>
-      <div className='container flex items-center mx-auto flex-col w-full py-6'>
+    <div className='tourney relative'>
+      <div className=' container flex items-center mx-auto flex-col w-full py-6'>
         <h1 className='uppercase px-24 pb-12 text-gray-300 text-5xl text-right pl-96 ml-64 items-right'>Our Tournaments</h1>
         <div className='flex flex-row space-x-12'>
           <div className='flex w-full md:w-2/5 justify-center items-start text-center md:text-left'>
