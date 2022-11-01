@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 
 const ImageSchema = new Schema({
     image:{
-        type:String,        
+        type:String,
+        required:true  
     },
     cevent:{
         type: mongoose.Types.ObjectId,

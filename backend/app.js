@@ -1,11 +1,14 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import multer from 'multer';
 import CompletedEvents from './models/CompletedEvents.js';
 import UpcomingEvents from './models/UpcomingEvents.js';
 import Images from './models/Images.js';
 import Registered from './models/Registered.js';
+import cors from 'cors'
 const app = express();
-app.use(express.json())
+app.use(cors());
+app.use(express.json({limit: '50mb'}));
 
 mongoose.connect(
     "mongodb+srv://sarthak312:8urhW64z80ujMvSz@cluster0.2zdz3pp.mongodb.net/?retryWrites=true&w=majority"
@@ -25,7 +28,7 @@ app.get("/getcevents", async (req, res) => {
 })
 
 app.post("/cevent", async(req, res) => { 
-    const {name, date, prize, first, second, third, poster} = req.body;
+    const {name, date, prize, first, second, third, poster} = req.body;    
     const cevent = new CompletedEvents({
         name,
         date,
@@ -47,6 +50,22 @@ app.post("/cevent", async(req, res) => {
     return res.status(200).json({cevent})
 })
 
+app.get("/getcevent/:id", async(req, res) => {
+    const eventid = req.params.id;
+    let cevent;
+    try{
+        cevent= await CompletedEvents.findById(eventid);
+    }catch(err){
+        console.log(err)
+        return res.status(500).json({message: err})
+    }
+    if(!cevent){
+        return res.status(404).json({message:"Event Not Found"})
+    }
+    return res.status(200).json(cevent)
+
+})
+
 app.delete("/delcevent/:id" , async(req,res) => {    
     const ceventID = req.params.id;
     let cevent;
@@ -63,17 +82,9 @@ app.delete("/delcevent/:id" , async(req,res) => {
 })
 
 app.post("/addimg/:id", async(req, res) => {
-    const ceventid=req.params.id;
-    let cevent;
+    const cevent=req.params.id;    
     const {image} = req.body;
-    try{
-        cevent = await CompletedEvents.findById(ceventid);
-    }catch(err){
-        console.log(err)
-    }
-    if(!cevent){
-        return res.status(404).json({message:"Event Not Found"})
-    }
+    
     const img = new Images({
         image,
         cevent,
@@ -82,14 +93,24 @@ app.post("/addimg/:id", async(req, res) => {
         const session = await mongoose.startSession();
         session.startTransaction();
         await img.save({session});
-        cevent.gallery.push(img);
-        await cevent.save({session});
-        await session.commitTransaction();        
+        await session.commitTransaction();
     }catch(err){
         console.log(err)
         return res.status(500).json({message: err})
     }
-    return res.status(200).json({message:"Successful"})
+    return res.status(200).json({img})
+        
+})
+
+app.get("/getimage/:id", async(req, res) => {
+    const cevent = req.params.id;
+    let images;
+    try{
+        images = await Images.find({cevent})
+    }catch(err){
+        console.log(err)
+    }
+    return res.status(200).json({images})
 })
 
 app.get("/getimages", async(req, res) => {
@@ -107,9 +128,7 @@ app.delete("/delimg/:id", async(req, res)=>{
     let img;
 
     try{
-        img = await Images.findByIdAndRemove(imgID).populate('cevent');
-        await img.cevent.gallery.pull(img);
-        await img.cevent.save();
+        img = await Images.findByIdAndRemove(imgID);                
     }catch(err){
         return console.log(err)
     }
@@ -130,14 +149,31 @@ app.get("/getuevents", async (req, res) => {
     return res.status(200).json({uevents})
 })
 
+app.get("/getuevent/:id", async(req, res) => {
+    const eventid = req.params.id;
+    let uevent;
+    try{
+        uevent= await UpcomingEvents.findById(eventid);
+    }catch(err){
+        console.log(err)
+        return res.status(500).json({message: err})
+    }
+    if(!uevent){
+        return res.status(404).json({message:"Event Not Found"})
+    }
+    return res.status(200).json(uevent)
+
+})
+
 app.post("/uevent", async(req, res) => {
-    const {name, date, prize, venue, poster} = req.body;
+    const {name, date, prize, venue, deadline, poster} = req.body;    
     const uevent = new UpcomingEvents({
         name,
         date,
         prize,
         venue,
         poster,        
+        deadline,
     })
     try{
         const session = await mongoose.startSession();
@@ -158,7 +194,7 @@ app.delete("/deluevent/:id" , async(req,res) => {
     try{
         await Registered.deleteMany({eventid})
     }catch(err){
-        console.log(first)
+        console.log(err)
     }
 
     try{

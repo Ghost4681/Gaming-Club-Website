@@ -279,3 +279,14 @@ nav {
 .results_winner{
     height: 20rem;
 }
+
+.card1{
+    width: 45%;
+    background-color: red;
+    height: 200px;
+}
+.flexbaksa{
+    display: flex;
+    flex-wrap: wrap;
+    gap:35px;
+}
