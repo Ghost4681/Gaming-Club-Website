@@ -1,11 +1,13 @@
 import React from 'react'
 import MemberCard from './MemberCard';
-
+import line from '../../static/line.png'
+import love from '../../static/love_sticker.png'
+import Footer from '../Footer'
 
 function About(props) {
   return (
 
-    <div className="vh-600 bg-gray-500">
+    <div className=" bg-gray-500">
       <div className='pt-36'>
         <div className='flex flex-col items-start w-full'>
           <h1 className='uppercase px-24 pb-12 text-gray-300 text-5xl'>Meet the team</h1>
@@ -94,7 +96,11 @@ function About(props) {
               <MemberCard Imglink={require("../../static/members/vedant.jpg")} BwImg={require("../../static/members/vedant_bw.jpg")} Name='vedant agarwal' Post='Member- Game Dev Team' Insta='https://www.instagram.com/vedant.2105/' />
 
             </div>
+
+
           </div>
+          <div className='mt-8 flex flex-coll w-full vh-40 bg-black'><h2 className='w-full text-white text-center text-sm mt-2'>Made with ❤ by Tarun, Sarthak and Vedant</h2></div>
+          <Footer />
         </div>
       </div>
     </div>
