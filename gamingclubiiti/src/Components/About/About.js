@@ -73,6 +73,27 @@ function About(props) {
               </div>
             </div>
 
+            <h2 className='uppercase self-start'>marketing team</h2>
+            <div className='flex flex-row items-center text-center space-x-12'>
+
+              <MemberCard Imglink={require("../../static/members/pushkal.jpg")} BwImg={require("../../static/members/pushkal_bw.jpg")} Name='pushkal M' Post='Marketing Head' Insta='https://www.instagram.com/pushkal_madhawacharya/' />
+              <MemberCard Imglink={require("../../static/members/vishwanath.jpg")} BwImg={require("../../static/members/vishwanath_bw.jpg")} Name='vishwanath dorlikar' Post='Member- Marketing Team' Insta='https://www.instagram.com/vishwanath_dorlikar/' />
+              <MemberCard Imglink={require("../../static/members/manya.jpg")} BwImg={require("../../static/members/manya_bw.jpg")} Name='manya Rajib Jain' Post='Member- Marketing Team' Insta='https://www.instagram.com/manyarajib/' />
+
+            </div>
+            <div className='flex flex-row items-center text-center space-x-12'>
+
+              <MemberCard Imglink={require("../../static/members/ayush.jpg")} BwImg={require("../../static/members/ayush_bw.jpg")} Name='ayush Shukla' Post='Member- Marketing Team' Insta='https://www.instagram.com/ayush_s746/' />
+              <MemberCard Imglink={require("../../static/members/rajesh.jpg")} BwImg={require("../../static/members/rajesh_bw.jpg")} Name='rajesh devulapalli' Post='Member- Marketing Team' Insta='https://www.instagram.com/rajesh.dev_/' />
+
+            </div>
+            <h2 className='uppercase self-start'>Game Dev team</h2>
+            <div className='flex flex-row items-center text-center space-x-12'>
+
+              <MemberCard Imglink={require("../../static/members/priyanshu_govind.jpg")} BwImg={require("../../static/members/priyanshu_govind_bw.jpg")} Name='priyanshu govind rao' Post='Game Dev Head' Insta='https://www.instagram.com/frankenstein_0211/' />
+              <MemberCard Imglink={require("../../static/members/vedant.jpg")} BwImg={require("../../static/members/vedant_bw.jpg")} Name='vedant agarwal' Post='Member- Game Dev Team' Insta='https://www.instagram.com/vedant.2105/' />
+
+            </div>
           </div>
         </div>
       </div>

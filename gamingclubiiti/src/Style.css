@@ -33,7 +33,11 @@ nav {
 }
 
 .vh-600{
-    height: 600vh;
+    height: 610vh;
+}
+
+.text-smd{
+    font-size: 1.5rem;
 }
 
 .home {
