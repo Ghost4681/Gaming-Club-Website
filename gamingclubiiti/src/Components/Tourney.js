@@ -9,7 +9,7 @@ import coming_soon from '../static/coming_soon.jpg'
 
 function Tourney() {
   return (
-    <div className='tourney relative'>
+    <div className='vh-100 bg-gradient-to-t from-gray-900 to-gray-600 bg-gradient-to-r relative'>
       <div className=' container flex items-center mx-auto flex-col w-full py-6'>
         <h1 className='uppercase px-24 pb-12 text-gray-300 text-5xl text-right pl-96 ml-64 items-right'>Our Tournaments</h1>
         <div className='flex flex-row space-x-12'>
