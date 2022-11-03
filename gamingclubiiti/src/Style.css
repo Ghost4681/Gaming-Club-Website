@@ -36,6 +36,10 @@ nav {
     height: 150vh;
 }
 
+.vh-300{
+    height: 300vh;
+}
+
 .vh-600{
     height: 650vh;
 }
@@ -102,46 +106,35 @@ a{
     background-color: rgb(255, 255, 255);
 }
 
-.tourn-card{
-    position: relative;
-    height: 60vh;
-    width: 20vw;
-    background-color: rgb(216, 229, 229);
-    box-shadow: rgba(184, 184, 193, 0.25) 0px 50px 100px -20px, rgba(230, 226, 226, 0.3) 0px 30px 60px -30px;
-}
 
 .minecraft-card-img{
-    height: 35%;
     background-image: url('./static/minecraft_logo.png');
     border-radius: 1rem;
-    background-size: 35%;
+    background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
     animation: float 6s ease-in-out infinite;
 }
 .cod-card-img{
-    height: 35%;
     background-image: url('./static/cod_logo.png');
     border-radius: 1rem;
-    background-size: 35%;
+    background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
     animation: float 6s ease-in-out infinite;
 }
 .fifa-card-img{
-    height: 35%;
     background-image: url('./static/fifa_logo.png');
     border-radius: 1rem;
-    background-size: 35%;
+    background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
     animation: float 6s ease-in-out infinite;
 }
 .valorant-card-img{
-    height: 35%;
     background-image: url('./static/valorant_logo.png');
     border-radius: 1rem;
-    background-size: 35%;
+    background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
     animation: float 6s ease-in-out infinite;

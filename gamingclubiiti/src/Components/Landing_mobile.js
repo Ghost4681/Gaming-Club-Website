@@ -4,10 +4,10 @@ import img1 from '../static/landing.png'
 
 function Landing_mobile() {
     return (
-        <div className='flex flex-col flex-wrap vh-100 bg-gradient-to-t from-gray-700 via-gray-900 to-black w-full justify-center'>
+        <div className='flex flex-col flex-wrap bg-gradient-to-t from-gray-700 via-gray-900 to-black w-full justify-center'>
             {/* Hero */}
             <div className=" flex w-full items-center text-center">
-                <img className='h-96' src={img1} />
+                <img className='h-84' src={img1} />
             </div>
             {/* <!--Second Row--> */}
             <div className='text-center flex flex-col'>
@@ -26,7 +26,7 @@ function Landing_mobile() {
                 </div>
 
             </div>
-            <div className='justify-self-end pt-24'>
+            <div className='justify-self-end pb-8'>
 
                 <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

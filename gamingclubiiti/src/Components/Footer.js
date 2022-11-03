@@ -25,11 +25,6 @@ function Footer() {
                             </div>
                             <div className="col-md-2">
                             <h6>
-                                    <a href="#!" className="text-uppercase font-weight-bold text-red-50 hover:text-red-500 transition ease-in-out duration-500">News</a>
-                                </h6>
-                            </div>
-                            <div className="col-md-2">
-                            <h6>
                                     <a href="#!" className="text-uppercase font-weight-bold text-red-50 hover:text-red-500 transition ease-in-out duration-500">Contact</a>
                                 </h6>
                             </div>
